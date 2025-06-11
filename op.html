@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Summary Feedback</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+</head>
+<body>
+
+  <!-- Top Section -->
+  <div class="layout">
+    <div class="video-container">
+      <video controls width="100%" height="100%">
+        <source src="your-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="summary-container">
+      <header>Summary</header>
+      <dotlottie-player 
+        src="https://lottie.host/e21eb04a-d842-472d-9407-a63eafff5aa5/GqB1OiA9C0.lottie" 
+        background="transparent" 
+        speed="1" 
+        loop 
+        autoplay>
+      </dotlottie-player>
+    </div>
+  </div>
+
+  <!-- Positive Feedback -->
+  <div class="feedback-section">
+    <div class="feedback-box">
+      <div class="feedback-title">
+        Positive Factors
+        <span class="comment-badge comment-badge-positive">3 comments</span>
+      </div>
+      <div class="feedback-grid">
+        <div class="feedback-entry">
+          <div class="feedback-label">Great</div>
+          <div class="feedback-subtitle">Quality appreciation</div>
+          <div class="feedback-bar-container">
+            <div class="feedback-bar-fill-positive" style="width: 33%;"></div>
+          </div>
+          <div class="feedback-percent-text">33% of positive comments</div>
+        </div>
+        <div class="feedback-entry">
+          <div class="feedback-label">Amazing</div>
+          <div class="feedback-subtitle">Exceptional content</div>
+          <div class="feedback-bar-container">
+            <div class="feedback-bar-fill-positive" style="width: 33%;"></div>
+          </div>
+          <div class="feedback-percent-text">33% of positive comments</div>
+        </div>
+        <div class="feedback-entry">
+          <div class="feedback-label">Helpful</div>
+          <div class="feedback-subtitle">Value provided</div>
+          <div class="feedback-bar-container">
+            <div class="feedback-bar-fill-positive" style="width: 33%;"></div>
+          </div>
+          <div class="feedback-percent-text">33% of positive comments</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Negative Feedback -->
+  <div class="feedback-section">
+    <div class="feedback-box">
+      <div class="feedback-title">
+        Negative Factors
+        <span class="comment-badge comment-badge-negative">2 comments</span>
+      </div>
+      <div class="feedback-grid">
+        <div class="feedback-entry negative">
+          <div class="feedback-label">Audio</div>
+          <div class="feedback-subtitle">Audio quality issues</div>
+          <div class="feedback-bar-container">
+            <div class="feedback-bar-fill-negative" style="width: 50%;"></div>
+          </div>
+          <div class="feedback-percent-text">50% of negative comments</div>
+        </div>
+        <div class="feedback-entry negative">
+          <div class="feedback-label">Shaky</div>
+          <div class="feedback-subtitle">Camera instability</div>
+          <div class="feedback-bar-container">
+            <div class="feedback-bar-fill-negative" style="width: 50%;"></div>
+          </div>
+          <div class="feedback-percent-text">50% of negative comments</div>
+        </div>
+        <div class="feedback-entry negative">
+          <div class="feedback-label">Boring</div>
+          <div class="feedback-subtitle">Engagement issue</div>
+          <div class="feedback-bar-container">
+            <div class="feedback-bar-fill-negative" style="width: 0%;"></div>
+          </div>
+          <div class="feedback-percent-text">0% of negative comments</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Add this section BELOW the positive and negative feedback sections -->
+<div class="team-feedback-section">
+  <!-- Editing Team -->
+  <div class="team-box">
+    <div class="team-header editing">
+      <h3>Editing Team</h3>
+      <p>Feedback on pacing, graphics, sound, and transitions.</p>
+    </div>
+    <div class="team-items">
+      <div class="team-item">Add ingredients overlay at start</div>
+      <div class="team-item">Include ingredient list in description</div>
+      <div class="team-item">Use text overlays for key steps</div>
+      <div class="team-item">Continue with current editing style</div>
+    </div>
+  </div>
+
+  <!-- Camera Team -->
+  <div class="team-box">
+    <div class="team-header camera">
+      <h3>Camera Team</h3>
+      <p>Insights on shot composition, lighting, and video quality.</p>
+    </div>
+    <div class="team-items">
+      <div class="team-item">Clear shots of all ingredients</div>
+      <div class="team-item">Close-up shots during preparation</div>
+      <div class="team-item">Maintain current video quality standards</div>
+      <div class="team-item">Invest in camera stabilizer/gimbal</div>
+    </div>
+  </div>
+
+  <!-- Content Team -->
+  <div class="team-box">
+    <div class="team-header content">
+      <h3>Content Team</h3>
+      <p>Suggestions for topics, formats, and overall strategy.</p>
+    </div>
+    <div class="team-items">
+      <div class="team-item">Standardize recipe video format</div>
+      <div class="team-item">Always show ingredients first</div>
+      <div class="team-item">More nostalgic content performs well</div>
+      <div class="team-item">Classic music resonates with audience</div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

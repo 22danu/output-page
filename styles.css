@@ -1,0 +1,214 @@
+body {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+}
+
+/* Layout for video and summary */
+.layout {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* Video Container */
+.video-container {
+  flex: 1 1 500px;
+  max-width: 600px;
+  aspect-ratio: 16/9;
+  background-color: #000;
+}
+
+/* Summary next to video */
+.summary-container {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.summary-container header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.summary-container dotlottie-player {
+  width: 60px;
+  height: 60px;
+}
+
+/* Feedback Sections */
+.feedback-section {
+  margin-top: 30px;
+  padding: 10px 20px;
+}
+
+.feedback-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.feedback-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Comment badges */
+.comment-badge {
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  border-radius: 12px;
+  color: #fff;
+}
+
+.comment-badge-positive {
+  background-color: #4caf50;
+}
+
+.comment-badge-negative {
+  background-color: #f44336;
+}
+
+/* Grid layout for feedback items */
+.feedback-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Feedback entries */
+.feedback-entry {
+  background-color: #e8f5e9;
+  border-left: 5px solid #388e3c;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.feedback-entry.negative {
+  background-color: #ffebee;
+  border-left: 5px solid #c62828;
+}
+
+/* Labels */
+.feedback-label {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.feedback-subtitle {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Bar container */
+.feedback-bar-container {
+  background-color: #ccc;
+  height: 8px;
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+
+.feedback-bar-fill-positive {
+  height: 100%;
+  background-color: #81c784;
+  border-radius: 4px;
+}
+
+.feedback-bar-fill-negative {
+  height: 100%;
+  background-color: #ef9a9a;
+  border-radius: 4px;
+}
+
+/* Text below bar */
+.feedback-percent-text {
+  font-size: 0.8rem;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .video-container,
+  .summary-container {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.team-feedback-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  gap: 20px;
+}
+
+.team-box {
+  flex: 1 1 30%;
+  background-color: #fff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.team-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.team-header p {
+  margin: 5px 0 15px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.team-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.team-item {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 0.95rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.editing h3 {
+  color: #1e88e5;
+}
+.camera h3 {
+  color: #8e24aa;
+}
+.content h3 {
+  color: #f9a825;
+}
+
+@media (max-width: 768px) {
+  .team-feedback-section {
+    flex-direction: column;
+  }
+}
