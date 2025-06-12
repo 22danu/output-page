@@ -494,3 +494,58 @@ body {
 .content-tag.immediate { background-color: #ff6b81; }
 .content-tag.medium { background-color: #f1c40f; color: #000; }
 .content-tag.low { background-color: #2ecc71; }
+
+/* summary */
+.summary-container {
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.summary-container header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.sentiment-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.sentiment-box {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  flex: 1;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.sentiment-box img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.percent-bar {
+  height: 10px;
+  background: #ddd;
+  border-radius: 5px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 5px;
+}
+
+.percent-text {
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: bold;
+}
