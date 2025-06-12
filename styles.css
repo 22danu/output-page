@@ -148,12 +148,61 @@ body {
     align-items: center;
   }
 
+
   .video-container,
   .summary-container {
     width: 100%;
     max-width: 100%;
   }
 }
+.audience-needs-container {
+  width: 400px;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 20px;
+}
+
+.audience-needs-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.audience-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.audience-bar span {
+  width: 100px;
+  font-size: 14px;
+  color: #333;
+}
+
+.bar {
+  height: 28px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  padding-left: 10px;
+  line-height: 28px;
+}
+
+.bar-1 {
+  background-color: #42cba5;
+  width: 200px;
+}
+
+.bar-2 {
+  background-color: #2bb8ec;
+  width: 300px;
+}
+
+.bar-3 {
+  background-color: #f8a404;
+  width: 300px;
+}
+
 
 .team-feedback-section {
   display: flex;
@@ -211,4 +260,54 @@ body {
   .team-feedback-section {
     flex-direction: column;
   }
+}
+.yt-main-container {
+  width: 100%;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
+
+.yt-team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  width: 100%;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.yt-team-box {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease;
+}
+
+.yt-team-box:hover {
+  transform: translateY(-5px);
+}
+
+.yt-team-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.yt-team-link {
+  text-decoration: none;
+  font-size: 14px;
+  color: #007BFF;
+}
+
+.yt-team-link:hover {
+  text-decoration: underline;
 }
