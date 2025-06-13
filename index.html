@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack AI</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="static/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <!-- FontAwesome (still uses CDN) -->
+    <script src="https://kit.fontawesome.com/c951bb1c34.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="static/static/img/favicon.png">
+    <!-- Bootstrap JS (Bundle with Popper) -->
+    <script src="static/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <meta name="google-site-verification" content="_sYpodRREiDvW0JUzUWfFW8I_3Gl50IBH4mLH98EifA" />
+</head>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack AI</title>
+
+</head>
+
+<body onload="hideLoader()">
+    <audio autoplay loop>
+        <source src="/static/music/index.mp3">
+    </audio>
+    <!-- Loader -->
+    <!-- <div class="loader-container" id="loading">
+        <h3 style="margin-bottom: 100px;">Please Wait</h3>
+        <div class="loader-6">
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+        </div>
+    </div> -->
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom px-4">
+        <div class="container-fluid">
+            <!-- Left Section -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img class="nav-logo" src="static/img/logo.png" alt="">
+            </a>
+
+            <!-- Toggle Button for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible Section -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Search Bar -->
+                <div class="position-relative me-lg-3 my-2 my-lg-0">
+                    <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input type="text" class="form-control search-input" placeholder="Search Opportunities">
+                </div>
+
+                <!-- Center Section -->
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link text-dark" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="/aboutus">About-Us</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="/features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="/pricing">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#">Contact-Us</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown">
+                            More
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/404">404</a></li>
+                            <li><a class="dropdown-item" href="#">Testimonials</a></li>
+                            <li><a class="dropdown-item" href="#">Blogs</a></li>
+                            <li><a class="dropdown-item" href="#">Help Center</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Right Section -->
+                <div class="d-flex align-items-center gap-3 right-section">
+                    <div class="position-relative">
+                        <i class="fa-regular fa-comment fa-lg"></i>
+                    </div>
+                    <i class="fa-regular fa-bell fa-lg"></i>
+                    <div class="profile-circle">S</div>
+                    <button onclick="window.location.href='/login'" class="btn btn-outline-dark login-btn"><i
+                            class="fa-regular fa-plus"></i> Login</button>
+                    <button class="btn business-btn d-flex align-items-center">
+                        <span class="fw-bold"><img src="static/img/icon.png" alt="">For Business
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content">
+
+        <!-- Top Section -->
+        <div class="layout">
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/gsUfXFfa1Zo?si=W3KrvOYs3lE9vku8"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </div>
+
+            <div class="sentiment-wrapper">
+                <div class="sentiment-box positive">
+                    <dotlottie-player src="https://lottie.host/a2be5073-95dc-4476-b6f7-b10943b379e8/IC9ZU4gh80.lottie"
+                        background="transparent" speed="1" loop autoplay></dotlottie-player>
+                    <p class="sentiment-label">Positive</p>
+                    <div class="percent-bar">
+                        <div class="bar-fill" style="width: 70%; background-color: #4CAF50;"></div>
+                    </div>
+                    <p class="percent-text">70%</p>
+                </div>
+
+                <div class="sentiment-box neutral">
+                    <dotlottie-player src="https://lottie.host/e21eb04a-d842-472d-9407-a63eafff5aa5/GqB1OiA9C0.lottie"
+                        background="transparent" speed="1" loop autoplay></dotlottie-player>
+                    <p class="sentiment-label">Neutral</p>
+                    <div class="percent-bar">
+                        <div class="bar-fill" style="width: 20%; background-color: #FFC107;"></div>
+                    </div>
+                    <p class="percent-text">20%</p>
+                </div>
+
+                <div class="sentiment-box negative">
+                    <dotlottie-player src="https://lottie.host/d230c659-1eb1-4249-81c8-4aacca5cd89a/SELvPc7oIw.lottie"
+                        background="transparent" speed="1" loop autoplay></dotlottie-player>
+                    <p class="sentiment-label">Negative</p>
+                    <div class="percent-bar">
+                        <div class="bar-fill" style="width: 10%; background-color: #F44336;"></div>
+                    </div>
+                    <p class="percent-text">10%</p>
+                </div>
+            </div>
+
+            <div>
+                <dotlottie-player src="https://lottie.host/c5631074-5310-41ad-8ba8-0f8800a8ff18/7BVZyIewxe.lottie"
+                    background="transparent" speed="1" style="width: 300px; height: 300px" loop
+                    autoplay></dotlottie-player>
+            </div>
+
+        </div>
+
+        <!-- Feedback Section -->
+        <div class="feedback-wrapper">
+
+            <!-- Positive Feedback -->
+            <div class="feedback-column">
+                <div class="feedback-title custom-heading">
+                    <div>
+                        Positive Factors
+                        <img src="up.png" height="20px" alt="">
+                    </div>
+                    <span class="comment-badge comment-badge-positive">3 comments</span>
+                </div>
+                <div class="feedback-grid">
+                    <!-- Sample Positive Entries -->
+                    <div class="feedback-entry">
+                        <div class="feedback-label">Authenticity & Relatability</div>
+                        <div class="feedback-subtitle">They were exactly the same on and off-camera</div>
+                        <div class="feedback-bar-container">
+                            <div class="feedback-bar-fill-positive" style="width: 74%;"></div>
+                        </div>
+                        <div class="feedback-percent-text">74% of positive comments</div>
+                        <!-- Maximize button added here
+                    <button class="entry-maximize-button" title="Maximize">
+                        <img src="maximize-icon.png" alt="Maximize" />
+                    </button> -->
+                    </div>
+                    <div class="feedback-entry">
+                        <div class="feedback-label">Stress-Buster & Fun</div>
+                        <div class="feedback-subtitle">Vlogs helped me cope with homesickness</div>
+                        <div class="feedback-bar-container">
+                            <div class="feedback-bar-fill-positive" style="width: 33%;"></div>
+                        </div>
+                        <div class="feedback-percent-text">33% of positive comments</div>
+                    </div>
+                    <div class="feedback-entry">
+                        <div class="feedback-label">Down‑to‑Earth Personality</div>
+                        <div class="feedback-subtitle">Strong Storytelling & very generous team.</div>
+                        <div class="feedback-bar-container">
+                            <div class="feedback-bar-fill-positive" style="width: 52%;"></div>
+                        </div>
+                        <div class="feedback-percent-text">52% of positive comments</div>
+                    </div>
+                    <div class="feedback-entry">
+                        <div class="feedback-label">Great</div>
+                        <div class="feedback-subtitle">Quality appreciation</div>
+                        <div class="feedback-bar-container">
+                            <div class="feedback-bar-fill-positive" style="width: 14%;"></div>
+                        </div>
+                        <div class="feedback-percent-text">14% of positive comments</div>
+                    </div>
+                    <div class="feedback-entry">
+                        <div class="feedback-label">Amazing</div>
+                        <div class="feedback-subtitle">Exceptional content</div>
+                        <div class="feedback-bar-container">
+                            <div class="feedback-bar-fill-positive" style="width: 33%;"></div>
+                        </div>
+                        <div class="feedback-percent-text">33% of positive comments</div>
+                    </div>
+                    <div class="feedback-entry">
+                        <div class="feedback-label">Helpful</div>
+                        <div class="feedback-subtitle">Value provided</div>
+                        <div class="feedback-bar-container">
+                            <div class="feedback-bar-fill-positive" style="width: 33%;"></div>
+                        </div>
+                        <div class="feedback-percent-text">33% of positive comments</div>
+                    </div>
+                    <!-- Add more feedback-entry elements -->
+                </div>
+                <button class="maximize-button" title="Maximize">
+                    <img src="maximize-icon.png" alt="Maximize" />
+                </button>
+            </div>
+
+            <!-- Negative Feedback -->
+            <div class="feedback-column">
+                <div class="feedback-title">
+                    <div>
+                        Negative Factors
+                        <img src="down.png" height="20px" alt="">
+                    </div>
+                    <span class="comment-badge comment-badge-negative">2 comments</span>
+                </div>
+                <div class="feedback-grid">
+                    <!-- Sample Negative Entries -->
+                    <div class="feedback-entry negative">
+                        <div class="feedback-label">Abusive Slang</div>
+                        <div class="feedback-subtitle">Full on body‑shaming and low key abusive.</div>
+                        <div class="feedback-bar-container">
+                            <div class="feedback-bar-fill-negative" style="width: 50%;"></div>
+                        </div>
+                        <div class="feedback-percent-text">50% of negative comments</div>
+                    </div>
+                    <div class="feedback-entry negative">
+                        <div class="feedback-label">Content Feels Scripted & Lazy</div>
+                        <div class="feedback-subtitle">Too much scripted… random and lazy.</div>
+                        <div class="feedback-bar-container">
+                            <div class="feedback-bar-fill-negative" style="width: 70%;"></div>
+                        </div>
+                        <div class="feedback-percent-text">70% of negative comments</div>
+                    </div>
+                    <div class="feedback-entry negative">
+                        <div class="feedback-label">Insensitive Crew Treatment</div>
+                        <div class="feedback-subtitle">I don’t know how the cameraman tolerates it…</div>
+                        <div class="feedback-bar-container">
+                            <div class="feedback-bar-fill-negative" style="width: 12%;"></div>
+                        </div>
+                        <div class="feedback-percent-text">12% of negative comments</div>
+                    </div>
+                    <div class="feedback-entry negative">
+                        <div class="feedback-label">Audio</div>
+                        <div class="feedback-subtitle">Audio quality issues</div>
+                        <div class="feedback-bar-container">
+                            <div class="feedback-bar-fill-negative" style="width: 50%;"></div>
+                        </div>
+                        <div class="feedback-percent-text">50% of negative comments</div>
+                    </div>
+                    <div class="feedback-entry negative">
+                        <div class="feedback-label">Shaky</div>
+                        <div class="feedback-subtitle">Camera instability</div>
+                        <div class="feedback-bar-container">
+                            <div class="feedback-bar-fill-negative" style="width: 30%;"></div>
+                        </div>
+                        <div class="feedback-percent-text">30% of negative comments</div>
+                    </div>
+                    <div class="feedback-entry negative">
+                        <div class="feedback-label">Boring</div>
+                        <div class="feedback-subtitle">Engagement issue</div>
+                        <div class="feedback-bar-container">
+                            <div class="feedback-bar-fill-negative" style="width: 66%;"></div>
+                        </div>
+                        <div class="feedback-percent-text">66% of negative comments</div>
+                    </div>
+                    <!-- Add more feedback-entry elements -->
+                </div>
+                <button class="maximize-button" title="Maximize">
+                    <img src="maximize-icon.png" alt="Maximize" />
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Audience Section -->
+        <div class="feedback-wrapper">
+
+            <div class="audience-needs-section">
+                <div class="feedback-title">
+                    Audience Needs & Requests
+                    <span class="comment-badge comment-badge-positive">3 comments</span>
+                </div>
+
+                <div class="needs-list">
+                    <div class="need-item">
+                        <span class="need-label">🎭 Entertainment</span>
+                        <div class="need-bar">
+                            <div class="bar-fill" style="--bar-color: #20C997; --bar-width: 20%"></div>
+                            <span>1</span>
+                        </div>
+                    </div>
+
+                    <div class="need-item">
+                        <span class="need-label">📅 Upload Consistency</span>
+                        <div class="need-bar">
+                            <div class="bar-fill" style="--bar-color: #17A2B8; --bar-width: 20%"></div>
+                            <span>1</span>
+                        </div>
+                    </div>
+
+                    <div class="need-item">
+                        <span class="need-label">📈 More Content</span>
+                        <div class="need-bar">
+                            <div class="bar-fill" style="--bar-color: #007BFF; --bar-width: 40%"></div>
+                            <span>2</span>
+                        </div>
+                    </div>
+
+                    <div class="need-item">
+                        <span class="need-label">⚙️ Technical Improvements</span>
+                        <div class="need-bar">
+                            <div class="bar-fill" style="--bar-color: #007BFF; --bar-width: 40%"></div>
+                            <span>2</span>
+                        </div>
+                    </div>
+
+                    <div class="need-item">
+                        <span class="need-label">🎨 Content Variety</span>
+                        <div class="need-bar">
+                            <div class="bar-fill" style="--bar-color: #FFC107; --bar-width: 60%"></div>
+                            <span>3</span>
+                        </div>
+                    </div>
+
+                    <div class="need-item">
+                        <span class="need-label">🌐 Accessibility</span>
+                        <div class="need-bar">
+                            <div class="bar-fill" style="--bar-color: #FFC107; --bar-width: 60%"></div>
+                            <span>3</span>
+                        </div>
+                    </div>
+
+                    <div class="need-item">
+                        <span class="need-label">🤝 Collab Requests</span>
+                        <div class="need-bar">
+                            <div class="bar-fill" style="--bar-color: #6F42C1; --bar-width: 50%"></div>
+                            <span>2</span>
+                        </div>
+                    </div>
+
+                    <div class="need-item">
+                        <span class="need-label">📸 Behind-the-Scenes</span>
+                        <div class="need-bar">
+                            <div class="bar-fill" style="--bar-color: #E83E8C; --bar-width: 30%"></div>
+                            <span>1</span>
+                        </div>
+                    </div>
+
+                    <div class="need-item">
+                        <span class="need-label">📱 Mobile-Friendly Edits</span>
+                        <div class="need-bar">
+                            <div class="bar-fill" style="--bar-color: #FD7E14; --bar-width: 70%"></div>
+                            <span>4</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="needs-note">
+                    <p>These insights help prioritize what your audience cares about most — focus on consistent uploads,
+                        varied content, and accessibility for higher engagement.</p>
+                </div>
+            </div>
+
+            <!-- New Middle Section: Creator's Action Plan -->
+            <div class="column creator-action">
+                <div class="feedback-title">
+                    Action Plan
+                    <span class="comment-badge comment-badge-negative">Suggestions</span>
+                </div>
+
+                <ul class="action-list">
+                    <li><span class="icon">🎬</span> Upload more consistently – fans want regular content.</li>
+                    <li><span class="icon">🎧</span> Improve audio clarity and background noise.</li>
+                    <li><span class="icon">🧠</span> Add informative or behind-the-scenes content.</li>
+                    <li><span class="icon">🌐</span> Make content more accessible (subtitles, languages).</li>
+                    <li><span class="icon">📊</span> Track viewer drop-off to refine video pacing.</li>
+                    <li><span class="icon">🧪</span> Experiment with Shorts – turn highlight moments into bite-sized
+                        content.</li>
+                </ul>
+
+
+                <div class="note">
+                    Based on current feedback trends and sentiment analysis, these are key focus areas to improve
+                    engagement and retention.
+                </div>
+            </div>
+
+            <div class="center-wrapper">
+                <div class="feedback-column">
+                    <div class="feedback-title">
+                        Viewer's Emotion
+                        <span class="comment-badge comment-badge-negative">2 comments</span>
+                    </div>
+                    <div class="feedback-grid custom">
+
+                        <div class="emotion">
+                            <dotlottie-player
+                                src="https://lottie.host/124b73ab-267b-493b-aa31-d074b30deebc/1eSP12rZKg.lottie"
+                                background="transparent" speed="1" style="width: 100px; height: 100px" loop autoplay>
+                            </dotlottie-player>
+                            <div class="oval">Joy</div>
+                            <div class="emotion-tip">Editing in Ep.3 hit the mark – repeat those energetic cuts & meme
+                                humor.</div>
+                        </div>
+
+                        <div class="emotion">
+                            <dotlottie-player
+                                src="https://lottie.host/410fb54f-b001-4eb2-ac9a-b4653544f435/iqLgPx7tx3.lottie"
+                                background="transparent" speed="1" style="width: 100px; height: 100px" loop autoplay>
+                            </dotlottie-player>
+                            <div class="oval">Anger</div>
+                            <div class="emotion-tip">Last video’s title felt misleading – ensure title matches the story
+                                vibe.</div>
+                        </div>
+
+                        <div class="emotion">
+                            <dotlottie-player
+                                src="https://lottie.host/bbe6de66-f0e2-43c8-a54e-b3afcf1f6168/Sb4ZPYeH2L.lottie"
+                                background="transparent" speed="1" style="width: 100px; height: 100px" loop autoplay>
+                            </dotlottie-player>
+                            <div class="oval">Trust</div>
+                            <div class="emotion-tip">Your vlog from home built strong trust – consider sharing your
+                                workflow or prep.</div>
+                        </div>
+
+                        <div class="emotion">
+                            <dotlottie-player
+                                src="https://lottie.host/fe6c11dd-7c68-498d-8815-925b6f5b82f6/aGgYmrGi8Y.lottie"
+                                background="transparent" speed="1" style="width: 100px; height: 100px" loop autoplay>
+                            </dotlottie-player>
+                            <div class="oval">Sadness</div>
+                            <div class="emotion-tip">The friend’s farewell touched many – follow-up vlog or update
+                                requested.</div>
+                        </div>
+
+                        <div class="emotion">
+                            <dotlottie-player
+                                src="https://lottie.host/9ebf437f-8a01-4ae2-a394-04723d568ef7/l96G298F4f.lottie"
+                                background="transparent" speed="1" style="width: 100px; height: 100px" loop autoplay>
+                            </dotlottie-player>
+                            <div class="oval">Disgust</div>
+                            <div class="emotion-tip">Excessive visual zooms in Ep.5 made some viewers uneasy – smooth it
+                                out.</div>
+                        </div>
+
+                        <div class="emotion">
+                            <dotlottie-player
+                                src="https://lottie.host/6d1d32da-a708-489d-936a-fe7298ed350b/faXVXTg6MA.lottie"
+                                background="transparent" speed="1" style="width: 100px; height: 100px" loop autoplay>
+                            </dotlottie-player>
+                            <div class="oval">Surprise</div>
+                            <div class="emotion-tip">Your surprise collab with RJ was loved – try a fan-led twist next
+                                time!</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="feedback-wrapper new">
+            <h2 class="yt-heading">Team Suggestions by Department</h2>
+            <div class="yt-team-grid">
+
+                <div class="yt-team-box">
+                    <p class="yt-team-title">🎬 Content / Creative<br>Team</p>
+                    <a href="team1.html" class="maximize-link" title="View Suggestions">
+                        <img src="maximize-icon.png" class="maximize-icon" alt="Go to Content Team Suggestions">
+                    </a>
+                </div>
+
+                <div class="yt-team-box">
+                    <p class="yt-team-title">🎥 Production<br>Team</p>
+                    <a href="team2.html" class="maximize-link" title="View Suggestions">
+                        <img src="maximize-icon.png" class="maximize-icon" alt="Go to Production Team Suggestions">
+                    </a>
+                </div>
+
+                <div class="yt-team-box">
+                    <p class="yt-team-title">✂️ Post-Production<br>Team</p>
+                    <a href="team3.html" class="maximize-link" title="View Suggestions">
+                        <img src="maximize-icon.png" class="maximize-icon" alt="Go to Post-Production Team Suggestions">
+                    </a>
+                </div>
+
+                <div class="yt-team-box">
+                    <p class="yt-team-title">📊 Analytics & SEO<br>Team</p>
+                    <a href="team4.html" class="maximize-link" title="View Suggestions">
+                        <img src="maximize-icon.png" class="maximize-icon" alt="Go to Analytics & SEO Team Suggestions">
+                    </a>
+                </div>
+
+                <div class="yt-team-box">
+                    <p class="yt-team-title">📣 Marketing &<br>Community</p>
+                    <a href="team5.html" class="maximize-link" title="View Suggestions">
+                        <img src="maximize-icon.png" class="maximize-icon"
+                            alt="Go to Marketing & Community Team Suggestions">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="widget company-intro-widget">
+                            <a href="index.html" class="site-logo"><img src="static/img/logo-light.png" alt="logo"></a>
+                            <p>Harness AI-powered sentiment analysis to understand customer opinions, enhance brand
+                                reputation, and improve business strategies.</p>
+                            <ul class="company-footer-contact-list">
+                                <li><i class="fas fa-phone"></i>9840332499</li>
+                                <li><i class="fas fa-clock"></i>Mon - Sat 8.00 - 18.00</li>
+                            </ul>
+                        </div>
+                    </div><!-- widget end -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="widget course-links-widget">
+                            <h5 class="widget-title">Key Features</h5>
+                            <ul class="courses-link-list">
+                                <li><a href="#"><i class="fas fa-long-arrow-alt-right"></i>Multi-Platform Monitoring
+                                    </a></li>
+                                <li><a href="#"><i class="fas fa-long-arrow-alt-right"></i>AI-Powered Sentiment
+                                        Analysis</a></li>
+                                <li><a href="#"><i class="fas fa-long-arrow-alt-right"></i>Real-Time Insights</a></li>
+                                <li><a href="#"><i class="fas fa-long-arrow-alt-right"></i>Data Visualization</a></li>
+                                <li><a href="#"><i class="fas fa-long-arrow-alt-right"></i>Business Intelligence
+                                        Chatbot</a></li>
+                                <li><a href="#"><i class="fas fa-long-arrow-alt-right"></i>Multilingual Analysis</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!-- widget end -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="widget latest-news-widget">
+                            <h5 class="widget-title">lastest news</h5>
+                            <ul class="small-post-list">
+                                <li>
+                                    <div class="small-post-item">
+                                        <a href="#" class="post-date">March 24, 2025 </a>
+                                        <h6 class="small-post-title"><a href="#">AI-driven sentiment analysis helps
+                                                businesses track opinions, boost engagement, and make data-driven
+                                                decisions.</a></h6>
+                                    </div>
+                                </li><!-- small-post-item end -->
+                                <li>
+                                    <div class="small-post-item">
+                                        <a href="#" class="post-date">March 10, 2025 </a>
+                                        <h6 class="small-post-title"><a href="#">VADER and RoBERTa analyze multilingual
+                                                feedback, offering deep insights into brand perception and trends.</a>
+                                        </h6>
+                                    </div>
+                                </li><!-- small-post-item end -->
+                            </ul>
+                        </div>
+                    </div><!-- widget end -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="widget newsletter-widget">
+                            <h5 class="widget-title">Newsletter</h5>
+                            <div class="footer-newsletter">
+                                <p>Sign Up to Our Newsletter to Get Latest Updates & Services</p>
+                                <form class="news-letter-form">
+                                    <input type="email" name="news-email" id="news-email"
+                                        placeholder="Your email address">
+                                    <input type="submit" value="Send">
+                                </form>
+                            </div>
+                        </div>
+                    </div><!-- widget end -->
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 text-sm-left text-center">
+                        <span class="copy-right-text">© 2025 <a href="#">Stack</a> All Rights Reserved.</span>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <ul class="terms-privacy d-flex justify-content-sm-end justify-content-center">
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div><!-- footer-bottom end -->
+    </footer>
+</body>
+<script>
+    function hideLoader() {
+        setTimeout(() => {
+            document.getElementById("loading").style.display = "none";
+            document.getElementById("content").style.display = "block";
+        }, 1000);
+    }
+    document.addEventListener("DOMContentLoaded", () => {
+        const counters = document.querySelectorAll(".counter");
+        let observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = +counter.getAttribute("data-target");
+                    const speed = 200; // Adjust speed
+                    let count = 0;
+                    let increment = target / speed;
+
+                    const updateCount = () => {
+                        if (count < target) {
+                            count += increment;
+                            counter.innerText = Math.ceil(count);
+                            setTimeout(updateCount, 20);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+
+                    updateCount();
+                    observer.unobserve(counter);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        counters.forEach(counter => observer.observe(counter));
+    });
+</script>
+
+</html>
