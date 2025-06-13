@@ -1266,12 +1266,6 @@ body {
   color: var(--primary-color);
 }
 
-.yt-team-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  justify-content: center;
-}
 
 .yt-team-box {
   background: #fff;
